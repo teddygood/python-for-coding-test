@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-data = list(map(int, input().split()))
+# n, m = map(int, input().split())
+# data = list(map(int, input().split()))
 
 # array = [0] * 11
 
@@ -14,9 +14,16 @@ data = list(map(int, input().split()))
     
 # print(result)
 
-from collections import Counter
 from itertools import combinations
 
-data = combinations(data, 2)
+n,m = map(int,input().split())
+k = list(map(int,input().split()))
 
-print(data)
+com = list(combinations(k,2))
+print(com)
+result = len(com)
+
+for i in com:
+    if i[0]==i[1]:
+        result -= 1
+print(result)
